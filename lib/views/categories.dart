@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:torob_flutter/views/popup.dart';
+import 'package:torob_flutter/views/search.dart';
 
 class Categories extends StatefulWidget {
   final categoryTitle;
@@ -28,14 +29,14 @@ class _CategoriesState extends State<Categories> {
                         onTap: (){
                           Navigator.pop(context);
                         },
-                        child: Text("مبایل و تبلت", style: TextStyle(color: Colors.grey, fontSize: 16))
+                        child: const Text("مبایل و تبلت", style: TextStyle(color: Colors.grey, fontSize: 16))
                     ),
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     InkWell(
                         onTap: (){
                           Navigator.pop(context);
                         },
-                        child: InkWell(child: Text("لپتاپ", style: TextStyle(color: Colors.grey, fontSize: 16)))
+                        child: const InkWell(child: const Text("لپتاپ", style: TextStyle(color: Colors.grey, fontSize: 16)))
                     ),
                   ],
                 ),
@@ -153,27 +154,60 @@ class _CategoriesState extends State<Categories> {
                       Text(widget.categoryTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                     ],
                   ),
-                  Divider(color: Colors.grey,),
+                  const Divider(color: Colors.grey,),
                   widget.categoryTitle == "موبایل و تبلت"?
                       Row(
                         children: [
                           Column(
-                            children: const [
-                              Text('گوشی موبایل', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                              SizedBox(height: 15,),
-                              Text('گوشی سامسونگ', style: TextStyle(fontSize: 16),),
-                              Text('گوشی اپل', style: TextStyle(fontSize: 16),),
-                              Text('گوشی شیائومی', style: TextStyle(fontSize: 16),)
+                            children: [
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "گوشی موبایل",)));
+                                },
+                                  child: const Text('گوشی موبایل', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)
+                              ),
+                              const SizedBox(height: 15,),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "گوشی سامسونگ",)));
+                                  },
+                                  child: const Text('گوشی سامسونگ', style: TextStyle(fontSize: 16),)),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "گوشی اپل",)));
+                                  },
+                                  child: const Text('گوشی اپل', style: const TextStyle(fontSize: 16),)),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "گوشی شیائومی",)));
+                                  },
+                                  child: const Text('گوشی شیائومی', style: TextStyle(fontSize: 16),))
                             ],
                           ),
                           const SizedBox(width: 100,),
                           Column(
-                            children: const [
-                              Text('تبلت', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                              SizedBox(height: 15,),
-                              Text('تبلت سامسونگ', style: TextStyle(fontSize: 16),),
-                              Text('تبلت اپل', style: TextStyle(fontSize: 16),),
-                              Text('تبلت شیائومی', style: TextStyle(fontSize: 16),)
+                            children: [
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "تبلت",)));
+                                  },
+                                  child: const Text('تبلت', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
+                              const SizedBox(height: 15,),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "تبلت سامسونگ",)));
+                                  },
+                                  child: const Text('تبلت سامسونگ', style: const TextStyle(fontSize: 16),)),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "تبلت اپل",)));
+                                  },
+                                  child: const Text('تبلت اپل', style: const TextStyle(fontSize: 16),)),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Search(categoryTitle: "تبلت شیائومی",)));
+                                  },
+                                  child: const Text('تبلت شیائومی', style: TextStyle(fontSize: 16),))
                             ],
                           )
                         ],
