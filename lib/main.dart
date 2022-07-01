@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:torob_flutter/views/categories.dart';
+import 'package:torob_flutter/views/popup.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -36,20 +39,101 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: const [
-                    Text("مبایل و تبلت", style: TextStyle(color: Colors.grey, fontSize: 16)),
-                    SizedBox(width: 20,),
-                    Text("لپتاپ", style: TextStyle(color: Colors.grey, fontSize: 16)),
+                  children: [
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Categories(categoryTitle: "موبایل و تبلت",)));
+                      },
+                        child: const Text("موبایل و تبلت", style: const TextStyle(color: Colors.grey, fontSize: 16))
+                    ),
+                    const SizedBox(width: 20,),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Categories(categoryTitle: "لپتاپ",)));
+                      },
+                        child: const InkWell(child:  Text("لپتاپ", style: TextStyle(color: Colors.grey, fontSize: 16)))
+                    ),
                   ],
                 ),
                 InkWell(
                   onTap: (){
-
+                    PopUp(
+                      context,
+                      color: Colors.white,
+                      body: Container(
+                        width: 200,
+                        height: 200,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const SizedBox(height: 4,),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children:  [
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.pop(context);
+                                    },
+                                      child: const Icon(Icons.close_rounded)
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Text('ورود یا ثبت‌نام', style: TextStyle(color: Colors.black, fontSize: 16,), textAlign: TextAlign.center,),
+                            const SizedBox(height: 10,),
+                            Column(
+                              children: [
+                                const Text("شماره موبایل", style: TextStyle(fontWeight: FontWeight.bold),),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.grey),
+                                        borderRadius: const BorderRadius.all(Radius.circular(6))
+                                    ),
+                                    child: TextFormField(
+                                      autofocus: true,
+                                      enableSuggestions: true,
+                                      // autofillHints: ,
+                                      onChanged: (value) {},
+                                      style: const TextStyle(fontSize: 16),
+                                      maxLines: 1,
+                                      cursorColor: Colors.red,
+                                      decoration: const InputDecoration(
+                                          border: InputBorder.none,
+                                          focusColor: Colors.grey,
+                                          fillColor: Colors.red),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: InkWell(
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(8)
+                                      ),
+                                      child: const Center(child: const Text("دریافت کد", style: TextStyle(color: Colors.white),)),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ), isDismissible: true,
+                    );
                   },
                   child: Container(
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey.withOpacity(0.5)),
-                      borderRadius: BorderRadius.all(Radius.circular(2))
+                      borderRadius: const BorderRadius.all(Radius.circular(2))
 
                     ),
                     child: const Padding(
@@ -90,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.all(Radius.circular(6))
+                    borderRadius: const BorderRadius.all(Radius.circular(6))
                   ),
                   child: TextFormField(
                     autofocus: true,
