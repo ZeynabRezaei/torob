@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:torob_flutter/views/popup.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:torob_flutter/views/product.dart';
 
 
 class Search extends StatefulWidget {
@@ -374,118 +375,128 @@ class _SearchState extends State<Search> {
                       itemBuilder: (context, index) {
                         return Row(
                           children: [
-                            SizedBox(
-                              height: 250,
-                              width: 180,
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          width: 100,
-                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                                          height: 100,
-                                          child: Image.asset("assets/images/medium.png"),
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        const AutoSizeText(
-                                          "itemName",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                                          minFontSize: 12,
-                                          maxFontSize: 16,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        const AutoSizeText(
-                                          "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 12, color: Colors.black),
-                                          minFontSize: 12,
-                                          maxFontSize: 16,
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children:[
-                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                                            ],
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Product()));
+                              },
+                              child: SizedBox(
+                                height: 250,
+                                width: 180,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 100,
+                                            decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                            height: 100,
+                                            child: Image.asset("assets/images/medium.png"),
                                           ),
-                                        )
-                                      ]
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          const AutoSizeText(
+                                            "itemName",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                            minFontSize: 12,
+                                            maxFontSize: 16,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          const AutoSizeText(
+                                            "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(fontSize: 12, color: Colors.black),
+                                            minFontSize: 12,
+                                            maxFontSize: 16,
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children:[
+                                                Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                                Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                              ],
+                                            ),
+                                          )
+                                        ]
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: 250,
-                              width: 180,
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          width: 100,
-                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                                          height: 100,
-                                          child: Image.asset("assets/images/medium.png"),
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        const AutoSizeText(
-                                          "itemName",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                                          minFontSize: 12,
-                                          maxFontSize: 16,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        const AutoSizeText(
-                                          "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 12, color: Colors.black),
-                                          minFontSize: 12,
-                                          maxFontSize: 16,
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children:[
-                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                                            ],
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Product()));
+                              },
+                              child: SizedBox(
+                                height: 250,
+                                width: 180,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 100,
+                                            decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                            height: 100,
+                                            child: Image.asset("assets/images/medium.png"),
                                           ),
-                                        )
-                                      ]
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          const AutoSizeText(
+                                            "itemName",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                            minFontSize: 12,
+                                            maxFontSize: 16,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          const AutoSizeText(
+                                            "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(fontSize: 12, color: Colors.black),
+                                            minFontSize: 12,
+                                            maxFontSize: 16,
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children:[
+                                                Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                                Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                              ],
+                                            ),
+                                          )
+                                        ]
+                                    ),
                                   ),
                                 ),
                               ),
