@@ -340,7 +340,6 @@ class _SearchState extends State<Search> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -350,10 +349,17 @@ class _SearchState extends State<Search> {
               child: Column(
                 children: [
                   //dropdown
-                  Row(
-                    children: const [
-                      Text("dropDown"),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        SizedBox(width: 50,),
+                        Icon(Icons.keyboard_arrow_down_sharp),
+                        Text("ارزان‌ترین", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                        SizedBox(width: 50,),
+                      ],
+                    ),
                   ),
                   const Divider(),
                   Row(
@@ -366,7 +372,7 @@ class _SearchState extends State<Search> {
                   const SizedBox(height: 30,),
                   Container(
                     width: MediaQuery.of(context).size.width - 330,
-                    height: MediaQuery.of(context).size.height - 239,
+                    height: MediaQuery.of(context).size.height - 263,
                     child: ListView.builder(
                       // physics: NeverScrollableScrollPhysics(),
                       itemCount: 10,
@@ -402,7 +408,7 @@ class _SearchState extends State<Search> {
                                             height: 10,
                                           ),
                                           const AutoSizeText(
-                                            "itemName",
+                                            "گوشی موبایل سامسونگ",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
                                             minFontSize: 12,
@@ -414,7 +420,7 @@ class _SearchState extends State<Search> {
                                             height: 10,
                                           ),
                                           const AutoSizeText(
-                                            "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
+                                            "گوشی موبایل سامسونگ گلکسی آ 32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 12, color: Colors.black),
                                             minFontSize: 12,
@@ -465,7 +471,7 @@ class _SearchState extends State<Search> {
                                             height: 10,
                                           ),
                                           const AutoSizeText(
-                                            "itemName",
+                                            "گوشی موبایل",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
                                             minFontSize: 12,
@@ -477,7 +483,7 @@ class _SearchState extends State<Search> {
                                             height: 10,
                                           ),
                                           const AutoSizeText(
-                                            "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
+                                            "گوشی موبایل گلکسی آ 32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 12, color: Colors.black),
                                             minFontSize: 12,
@@ -501,238 +507,238 @@ class _SearchState extends State<Search> {
                                 ),
                               ),
                             ),
-                            // SizedBox(
-                            //   height: 250,
-                            //   width: 180,
-                            //   child: Card(
-                            //     shape: RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(16),
-                            //     ),
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.all(8.0),
-                            //       child: Column(
-                            //           mainAxisAlignment: MainAxisAlignment.center,
-                            //           crossAxisAlignment: CrossAxisAlignment.center,
-                            //           children: [
-                            //             Container(
-                            //               width: 100,
-                            //               decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                            //               height: 100,
-                            //               child: Image.asset("assets/images/medium.png"),
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 1,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 2,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             Padding(
-                            //               padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                            //               child: Row(
-                            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //                 children:[
-                            //                   Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                            //                   Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                            //                 ],
-                            //               ),
-                            //             )
-                            //           ]
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
-                            // SizedBox(
-                            //   height: 250,
-                            //   width: 180,
-                            //   child: Card(
-                            //     shape: RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(16),
-                            //     ),
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.all(8.0),
-                            //       child: Column(
-                            //           mainAxisAlignment: MainAxisAlignment.center,
-                            //           crossAxisAlignment: CrossAxisAlignment.center,
-                            //           children: [
-                            //             Container(
-                            //               width: 100,
-                            //               decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                            //               height: 100,
-                            //               child: Image.asset("assets/images/medium.png"),
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 1,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 2,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             Padding(
-                            //               padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                            //               child: Row(
-                            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //                 children:[
-                            //                   Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                            //                   Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                            //                 ],
-                            //               ),
-                            //             )
-                            //           ]
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
-                            // SizedBox(
-                            //   height: 250,
-                            //   width: 180,
-                            //   child: Card(
-                            //     shape: RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(16),
-                            //     ),
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.all(8.0),
-                            //       child: Column(
-                            //           mainAxisAlignment: MainAxisAlignment.center,
-                            //           crossAxisAlignment: CrossAxisAlignment.center,
-                            //           children: [
-                            //             Container(
-                            //               width: 100,
-                            //               decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                            //               height: 100,
-                            //               child: Image.asset("assets/images/medium.png"),
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 1,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 2,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             Padding(
-                            //               padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                            //               child: Row(
-                            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //                 children:[
-                            //                   Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                            //                   Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                            //                 ],
-                            //               ),
-                            //             )
-                            //           ]
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
-                            // SizedBox(
-                            //   height: 250,
-                            //   width: 180,
-                            //   child: Card(
-                            //     shape: RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(16),
-                            //     ),
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.all(8.0),
-                            //       child: Column(
-                            //           mainAxisAlignment: MainAxisAlignment.center,
-                            //           crossAxisAlignment: CrossAxisAlignment.center,
-                            //           children: [
-                            //             Container(
-                            //               width: 100,
-                            //               decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
-                            //               height: 100,
-                            //               child: Image.asset("assets/images/medium.png"),
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 1,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             const SizedBox(
-                            //               height: 10,
-                            //             ),
-                            //             const AutoSizeText(
-                            //               "itemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemNameitemName",
-                            //               textAlign: TextAlign.center,
-                            //               style: TextStyle(fontSize: 12, color: Colors.black),
-                            //               minFontSize: 12,
-                            //               maxFontSize: 16,
-                            //               maxLines: 2,
-                            //               overflow: TextOverflow.ellipsis,
-                            //             ),
-                            //             Padding(
-                            //               padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
-                            //               child: Row(
-                            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            //                 children:[
-                            //                   Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
-                            //                   Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
-                            //                 ],
-                            //               ),
-                            //             )
-                            //           ]
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                            SizedBox(
+                              height: 250,
+                              width: 180,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                          height: 100,
+                                          child: Image.asset("assets/images/medium.png"),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی موبایل شیائومی",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی موبایل شیائومی آ 32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children:[
+                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                            ],
+                                          ),
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 250,
+                              width: 180,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                          height: 100,
+                                          child: Image.asset("assets/images/medium.png"),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی  32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children:[
+                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                            ],
+                                          ),
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 250,
+                              width: 180,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                          height: 100,
+                                          child: Image.asset("assets/images/medium.png"),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی لنوو",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی لنوو 32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children:[
+                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                            ],
+                                          ),
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 250,
+                              width: 180,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          decoration: BoxDecoration(color: const Color(0xFF36335f), borderRadius: BorderRadius.circular(18)),
+                                          height: 100,
+                                          child: Image.asset("assets/images/medium.png"),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی اپل",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const AutoSizeText(
+                                          "گوشی اپل 32 (128 گیگا بایت،‌رم 6گیگا بایت) | Samsung Galaxy A32 mobile phone (128GB,6GB RAM) - زمان ارسال بیست و پنج روز کاری",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 12, color: Colors.black),
+                                          minFontSize: 12,
+                                          maxFontSize: 16,
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children:[
+                                              Icon(Icons.heart_broken, color: Colors.grey.withOpacity(0.5),),
+                                              Icon(Icons.notifications, color: Colors.grey.withOpacity(0.5),),
+                                            ],
+                                          ),
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         );
                       },

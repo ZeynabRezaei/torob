@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:torob_flutter/views/categories.dart';
+import 'package:torob_flutter/views/favorite.dart';
 import 'package:torob_flutter/views/popup.dart';
 import 'package:torob_flutter/views/product.dart';
 
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Product()
+    return  const MaterialApp(
+      home: MyHomePage()
     );
   }
 }
@@ -63,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.white,
                       body: Container(
                         width: 200,
-                        height: 200,
+                        height: 250,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -110,6 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ),
                                 ),
+                                const Text("حساب کاربری دارم: ورود", style: TextStyle(color: Colors.red),),
+                                const SizedBox(height: 10,),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: InkWell(
