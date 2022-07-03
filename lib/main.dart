@@ -3,6 +3,7 @@ import 'package:torob_flutter/views/categories.dart';
 import 'package:torob_flutter/views/favorite.dart';
 import 'package:torob_flutter/views/popup.dart';
 import 'package:torob_flutter/views/product.dart';
+import 'package:torob_flutter/views/profile.dart';
 
 
 void main() {
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
-      home: MyHomePage()
+    return MaterialApp(
+      home: Profile()
     );
   }
 }
